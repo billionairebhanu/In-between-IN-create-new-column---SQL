@@ -70,7 +70,7 @@ select * from orders
 where [ship mode] not in ('standard class');
 
 select distinct [ship mode] from orders 
-where [ship mode] not in ('standard class');
+where [ship mode] not in ('standard class'); -- in / not in only work on exact condition, it will not work in pattern like (%A) 
 
 select [ship mode], [customer name],state from orders 
 where [ship mode] in ('first class','second class') and state = 'florida';
